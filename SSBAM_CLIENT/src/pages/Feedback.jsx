@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaAddressCard, FaArrowLeft, FaBookOpen } from "react-icons/fa";
 
 const Feedback = () => {
   return (
@@ -17,12 +17,14 @@ const Feedback = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Feedback</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Feedback
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -39,9 +41,13 @@ const Feedback = () => {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-600" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                We value your feedback and are committed to continuously improving our services. Your input helps us enhance the student experience and maintain high standards of education.
+                We value your feedback and are committed to continuously
+                improving our services. Your input helps us enhance the student
+                experience and maintain high standards of education.
               </p>
             </motion.div>
 
@@ -53,21 +59,37 @@ const Feedback = () => {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Submit Feedback</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-6">
+                Submit Feedback
+              </h2>
               <form className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Name</label>
-                  <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                  <input
+                    type="text"
+                    className="mt-1 block w-full border border-blue-400 rounded-md shadow-sm p-2 outline-blue-600"
+                  />
                 </div>
                 <div>
                   <label className="block text-gray-700">Email</label>
-                  <input type="email" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                  <input
+                    type="email"
+                    className="mt-1 block w-full border border-blue-400 rounded-md shadow-sm p-2 outline-blue-600"
+                  />
                 </div>
                 <div>
                   <label className="block text-gray-700">Feedback</label>
-                  <textarea className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" rows="4"></textarea>
+                  <textarea
+                    className="mt-1 block w-full border border-blue-400 rounded-md shadow-sm p-2 outline-blue-600"
+                    rows="4"
+                  ></textarea>
                 </div>
-                <button type="submit" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">Submit</button>
+                <button
+                  type="submit"
+                  className="bg-indigo-600 cursor-pointer text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
+                >
+                  Submit
+                </button>
               </form>
             </motion.div>
 
@@ -79,9 +101,20 @@ const Feedback = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                              <FaAddressCard className="text-indigo-600" />
+                              Contact Us
+                            </h2>
               <p className="text-gray-600">
-                For any queries regarding feedback, please contact our feedback office at <a href="mailto:feedback@college.edu" className="text-indigo-600 hover:underline">feedback@college.edu</a>.
+                For any queries regarding feedback, please contact our feedback
+                office at{" "}
+                <a
+                  href="mailto:feedback@college.edu"
+                  className="text-indigo-600 hover:underline"
+                >
+                  feedback@college.edu
+                </a>
+                .
               </p>
             </motion.div>
           </div>
@@ -91,4 +124,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback; 
+export default Feedback;

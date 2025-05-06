@@ -1,7 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaBookOpen } from "react-icons/fa";
+import { MdGroups } from "react-icons/md";
+import { GiLaurelCrown } from "react-icons/gi";
 
 const StudentProfile = () => {
   return (
@@ -17,12 +19,14 @@ const StudentProfile = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Student Profile</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Student Profile
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -37,23 +41,30 @@ const StudentProfile = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-800" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                Our Student Profile section provides information about the student body, including demographics, achievements, and opportunities for involvement in campus activities.
+                Our Student Profile section provides information about the
+                student body, including demographics, achievements, and
+                opportunities for involvement in campus activities.
               </p>
             </motion.div>
 
             {/* Demographics Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Demographics</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <MdGroups className="text-indigo-800 text-5xl" />
+                Demographics
+              </h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Total Students: 5000+</li>
                 <li>International Students: 500+</li>
@@ -70,9 +81,14 @@ const StudentProfile = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Achievements</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-6 flex gap-2 items-center">
+              <GiLaurelCrown size={24} className="text-indigo-800"/>
+                Achievements
+              </h2>
               <p className="text-gray-600">
-                Our students have achieved significant milestones in academics, sports, and extracurricular activities. We celebrate their success and encourage others to strive for excellence.
+                Our students have achieved significant milestones in academics,
+                sports, and extracurricular activities. We celebrate their
+                success and encourage others to strive for excellence.
               </p>
             </motion.div>
           </div>
@@ -82,4 +98,4 @@ const StudentProfile = () => {
   );
 };
 
-export default StudentProfile; 
+export default StudentProfile;

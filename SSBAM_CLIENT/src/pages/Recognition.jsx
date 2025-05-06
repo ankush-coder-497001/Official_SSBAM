@@ -7,20 +7,20 @@ const Recognition = () => {
     {
       icon: <FaAward className="w-8 h-8 text-indigo-600" />,
       title: 'NAAC Accreditation',
-      description: 'Accredited with "A" Grade by National Assessment and Accreditation Council',
-      year: '2020',
+      description: 'Accredited with "B++" Grade by National Assessment and Accreditation Council',
+      year: '2022',
     },
     {
       icon: <FaUniversity className="w-8 h-8 text-indigo-600" />,
       title: 'University Recognition',
-      description: 'Recognized by the State University and affiliated with major educational boards',
-      year: '1990',
+      description: 'Recognized by the Surguja University and affiliated with major educational boards',
+      year: '2003',
     },
     {
       icon: <FaGraduationCap className="w-8 h-8 text-indigo-600" />,
       title: 'UGC Recognition',
-      description: 'Recognized under Section 2(f) and 12(B) of the UGC Act, 1956',
-      year: '1995',
+      description: 'under Section 2(f) of the UGC Act',
+      year: '2003',
     },
   ];
 
@@ -55,9 +55,9 @@ const Recognition = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center mb-4 mt-2 text-blue-400 hover:text-blue-500 transition-colors"
             >
-              <FaArrowLeft className="mr-2" />
+              <FaArrowLeft className="mr-2 " />
               Back to Home
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-white">Recognition & Accreditations</h1>
@@ -75,7 +75,7 @@ const Recognition = () => {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Official Recognitions</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8">Official Recognitions</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {recognitions.map((recognition, index) => (
               <motion.div
@@ -102,7 +102,7 @@ const Recognition = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Recent Achievements</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8">Recent Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div

@@ -1,28 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaAward, FaBookOpen } from "react-icons/fa";
+import { GiLaurelCrown } from "react-icons/gi";
 
 const AwardsAchievements = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <section className="relative h-64 bg-indigo-600">
-        <div className="absolute inset-0 bg-black opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Awards & Achievements</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-md">
+              Awards & Achievements
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -33,15 +36,19 @@ const AwardsAchievements = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Overview Section */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-800" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                Our institution has been recognized for excellence in education, research, and community service. We celebrate the achievements of our students, faculty, and staff.
+                Our institution has been recognized for excellence in education,
+                research, and community service. We celebrate the achievements
+                of our students, faculty, and staff.
               </p>
             </motion.div>
 
@@ -53,7 +60,10 @@ const AwardsAchievements = () => {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Awards</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-6 flex items-center gap-2">
+                <FaAward className="text-indigo-800" />
+                Awards
+              </h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Best College Award 2023</li>
                 <li>Excellence in Research 2023</li>
@@ -70,9 +80,14 @@ const AwardsAchievements = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Achievements</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-6 flex gap-2 items-center">
+                <GiLaurelCrown size={24} className="text-indigo-800" />
+                Achievements
+              </h2>
               <p className="text-gray-600">
-                Our students and faculty have achieved significant milestones in academics, sports, and extracurricular activities. We are proud of their contributions and continue to support their growth.
+                Our students and faculty have achieved significant milestones in
+                academics, sports, and extracurricular activities. We are proud
+                of their contributions and continue to support their growth.
               </p>
             </motion.div>
           </div>
@@ -82,4 +97,4 @@ const AwardsAchievements = () => {
   );
 };
 
-export default AwardsAchievements; 
+export default AwardsAchievements;

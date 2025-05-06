@@ -9,31 +9,31 @@ const AdministrativeStaff = () => {
       position: 'Principal',
       email: 'principal@ssbamcollege.edu',
       phone: '+91 1234567890',
-      image: '/images/staff/principal.jpg',
+      image: 'http://ssbam.co.in/administration/Principal_ssbam.jpg',
       description: 'With over 20 years of experience in education and administration.',
     },
     {
-      name: 'Mrs. Priya Sharma',
-      position: 'Vice Principal',
+      name: 'Mr Rohit Sharma',
+      position: 'fuculty',
       email: 'viceprincipal@ssbamcollege.edu',
       phone: '+91 1234567891',
-      image: '/images/staff/vice-principal.jpg',
+      image: 'http://ssbam.co.in/administration/santosh.jpeg',
       description: 'Expert in academic planning and student welfare.',
     },
     {
-      name: 'Mr. Amit Patel',
+      name: 'Mr. Priyansh Sharma',
       position: 'Administrative Officer',
       email: 'admin@ssbamcollege.edu',
       phone: '+91 1234567892',
-      image: '/images/staff/admin-officer.jpg',
+      image: 'http://ssbam.co.in/administration/raginee.jpg',
       description: 'Handling college administration and operations.',
     },
     {
-      name: 'Mrs. Sunita Verma',
+      name: 'Mr. Aman Verma',
       position: 'Accounts Officer',
       email: 'accounts@ssbamcollege.edu',
       phone: '+91 1234567893',
-      image: '/images/staff/accounts.jpg',
+      image: 'http://ssbam.co.in/administration/gyan-mani.jpeg',
       description: 'Managing college finances and accounts.',
     },
     {
@@ -41,15 +41,15 @@ const AdministrativeStaff = () => {
       position: 'Librarian',
       email: 'library@ssbamcollege.edu',
       phone: '+91 1234567894',
-      image: '/images/staff/librarian.jpg',
+      image: 'http://ssbam.co.in/administration/naresh_patel.jpeg',
       description: 'Overseeing library resources and digital learning materials.',
     },
     {
-      name: 'Mrs. Anjali Gupta',
+      name: 'Mr. Anuj Gupta',
       position: 'Student Welfare Officer',
       email: 'welfare@ssbamcollege.edu',
       phone: '+91 1234567895',
-      image: '/images/staff/welfare.jpg',
+      image: 'http://ssbam.co.in/administration/ashish.jpeg',
       description: 'Focusing on student support and development programs.',
     },
   ];
@@ -67,7 +67,7 @@ const AdministrativeStaff = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 mb-4 hover:text-blue-500 transition-colors"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
@@ -86,7 +86,7 @@ const AdministrativeStaff = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Administrative Team</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-4">Meet Our Administrative Team</h2>
           <p className="text-xl text-gray-600">
             Dedicated professionals working together to ensure the smooth functioning of the college
           </p>
@@ -102,7 +102,7 @@ const AdministrativeStaff = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="h-48 bg-gray-200">
+              <div className="h-80 bg-gray-200">
                 <img
                   src={staff.image}
                   alt={staff.name}
