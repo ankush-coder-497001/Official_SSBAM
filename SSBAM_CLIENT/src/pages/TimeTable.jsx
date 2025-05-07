@@ -1,7 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaAddressCard, FaArrowLeft, FaBookOpen } from "react-icons/fa";
+import { RiCalendarScheduleFill } from "react-icons/ri";
 
 const TimeTable = () => {
   return (
@@ -17,12 +18,14 @@ const TimeTable = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Time Table</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Time Table
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -37,23 +40,30 @@ const TimeTable = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-800" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                Our Time Table provides a detailed schedule of classes, exams, and other academic activities. It is designed to help students plan their time effectively and stay organized.
+                Our Time Table provides a detailed schedule of classes, exams,
+                and other academic activities. It is designed to help students
+                plan their time effectively and stay organized.
               </p>
             </motion.div>
 
             {/* Schedule Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Schedule</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <RiCalendarScheduleFill className="text-indigo-800" />
+                Schedule
+              </h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Morning Classes: 9:00 AM - 12:00 PM</li>
                 <li>Lunch Break: 12:00 PM - 1:00 PM</li>
@@ -70,9 +80,20 @@ const TimeTable = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaAddressCard className="text-indigo-800" />
+                Contact Us
+              </h2>
               <p className="text-gray-600">
-                For any queries regarding the time table, please contact our academic office at <a href="mailto:academic@college.edu" className="text-indigo-600 hover:underline">academic@college.edu</a>.
+                For any queries regarding the time table, please contact our
+                academic office at{" "}
+                <a
+                  href="mailto:academic@college.edu"
+                  className="text-indigo-600 hover:underline"
+                >
+                  academic@college.edu
+                </a>
+                .
               </p>
             </motion.div>
           </div>
@@ -82,4 +103,4 @@ const TimeTable = () => {
   );
 };
 
-export default TimeTable; 
+export default TimeTable;

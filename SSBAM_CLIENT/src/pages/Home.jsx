@@ -47,27 +47,27 @@ const Home = () => {
     {
       title: 'Inspiring Programs',
       description: 'Motivational and career development programs',
-      image: '/placeholder-inspire.jpg',
+      image: '/images/activities/inspiring-programs.png',
     },
     {
       title: 'AbhiPrerna',
       description: 'Student development and leadership programs',
-      image: '/placeholder-abhiprerna.jpg',
+      image: '/images/activities/abhi-prerna.png',
     },
     {
       title: 'Exhibition',
       description: 'Annual science and technology exhibition',
-      image: '/placeholder-exhibition.jpg',
+      image: '/images/activities/exhibition.png',
     },
     {
       title: 'Jagriti',
       description: 'Cultural and literary festival',
-      image: '/placeholder-jagriti.jpg',
+      image: '/images/activities/jagriti.png',
     },
     {
       title: 'Project Vaibhav',
       description: 'Research and innovation projects',
-      image: '/placeholder-vaibhav.jpg',
+      image: '/images/activities/vaibhav.png',
     },
   ];
 
@@ -98,21 +98,21 @@ const Home = () => {
   // Sample data for leadership
   const leadership = [
     {
-      name: 'Dr. John Smith',
+      name: 'Vijay Ingole',
       position: 'Chairman',
-      image: '/placeholder-chairman.jpg',
+      image: '/images/leaders/chairman.png',
       description: 'Leading the institution with vision and dedication',
     },
     {
-      name: 'Dr. Sarah Johnson',
+      name: 'Ajay Ingole',
       position: 'Secretary',
-      image: '/placeholder-secretary.jpg',
+      image: '/images/leaders/secretary.png',
       description: 'Managing administrative excellence',
     },
     {
-      name: 'Dr. Michael Brown',
+      name: 'Dr. Rajesh Shrivastava',
       position: 'Principal',
-      image: '/placeholder-principal.jpg',
+      image: '/images/leaders/principal.png',
       description: 'Guiding academic excellence and innovation',
     },
   ];
@@ -122,19 +122,19 @@ const Home = () => {
     {
       title: 'New Academic Programs Announced',
       date: 'March 15, 2024',
-      image: '/placeholder-news1.jpg',
+      image: 'http://ssbam.co.in/Gallery/orientationprogram2021/ot1.jpeg',
       description: 'Introducing new courses in emerging technologies',
     },
     {
       title: 'Research Grant Awarded',
       date: 'March 10, 2024',
-      image: '/placeholder-news2.jpg',
+      image: 'http://ssbam.co.in/images/N11.jpeg',
       description: 'College receives major research funding',
     },
     {
       title: 'Student Achievement',
       date: 'March 5, 2024',
-      image: '/placeholder-news3.jpg',
+      image: 'http://ssbam.co.in/Gallery/GANDHIJAYANTIANDLALBAHADUR/gj1.jpg',
       description: 'Students win national competition',
     },
   ];
@@ -159,7 +159,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Our Leadership</h2>
+            <h2 className="text-3xl font-bold text-indigo-600">Our Leadership</h2>
             <p className="mt-4 text-xl text-gray-600">
               Meet the visionaries leading our institution
             </p>
@@ -175,11 +175,11 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="h-64 bg-gray-200">
+                <div className="h-100 bg-gray-200">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover cursor-grab"
                   />
                 </div>
                 <div className="p-6">
@@ -203,7 +203,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Latest News</h2>
+            <h2 className="text-3xl font-bold text-indigo-600">Latest News</h2>
             <p className="mt-4 text-xl text-gray-600">
               Stay updated with our latest happenings
             </p>
@@ -223,7 +223,7 @@ const Home = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover cursor-grab"
                   />
                 </div>
                 <div className="p-6">
@@ -247,7 +247,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Clubs & Societies</h2>
+            <h2 className="text-3xl font-bold text-indigo-600">Clubs & Societies</h2>
             <p className="mt-4 text-xl text-gray-600">
               Join our vibrant community of clubs and societies
             </p>
@@ -271,7 +271,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Other Activities</h2>
+            <h2 className="text-3xl font-bold text-indigo-600">Other Activities</h2>
             <p className="mt-4 text-xl text-gray-600">
               Explore our diverse range of activities and programs
             </p>
@@ -287,11 +287,11 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="h-48 bg-gray-200">
+                <div className="h-48 bg-white flex items-center justify-center">
                   <img
                     src={activity.image}
                     alt={activity.title}
-                    className="w-full h-full object-cover"
+                    className="w-48 h-full object-cover bg-center"
                   />
                 </div>
                 <div className="p-6">
@@ -314,7 +314,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Our Publications</h2>
+            <h2 className="text-3xl font-bold text-indigo-600">Our Publications</h2>
             <p className="mt-4 text-xl text-gray-600">
               Explore our research and academic publications
             </p>

@@ -21,19 +21,16 @@ const Footer = () => {
               <div className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-2 text-indigo-400" />
                 <p>
-                  SS BAM College<br />
-                  123 College Street<br />
-                  City, State - 123456<br />
-                  Country
+                Digma, Banaras Road
                 </p>
               </div>
               <div className="flex items-center">
                 <FaPhone className="mr-2 text-indigo-400" />
-                <p>+91 1234567890</p>
+                <p>Ambikapur, Surguja, CG</p>
               </div>
               <div className="flex items-center">
                 <FaEnvelope className="mr-2 text-indigo-400" />
-                <p>info@ssbamcollege.edu</p>
+                <p>principal@ssbam.co.in</p>
               </div>
             </div>
           </motion.div>
@@ -82,7 +79,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold">Location</h3>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d0.000000!3d0.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDAnMDAuMCJOIDDCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.796952239328!2d83.16599967509613!3d23.15919537907833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3989a16e28c8a885%3A0xdef4e5df9705ccb6!2sShri%20Sai%20Baba%20Aadarsh%20Mahavidyalaya!5e1!3m2!1sen!2sin!4v1745838219574!5m2!1sen!2sin"
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
@@ -105,7 +102,7 @@ const Footer = () => {
         >
           <div className="flex justify-center space-x-6">
             <a
-              href="#"
+              href="https://www.facebook.com/ssbam.co.in"
               className="text-gray-400 hover:text-indigo-400 transition-colors"
               aria-label="Facebook"
             >
@@ -143,7 +140,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="mt-8 text-center text-gray-400 text-sm"
         >
-          <p>© {currentYear} SS BAM College. All rights reserved.</p>
+          <p>© {currentYear} SSBAM. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

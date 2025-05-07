@@ -5,27 +5,27 @@ import { FaArrowLeft, FaUserTie, FaEnvelope, FaPhone } from 'react-icons/fa';
 const GoverningBody = () => {
   const members = [
     {
-      name: 'Dr. Ramesh Kumar',
+      name: 'Vijay Ingole',
       position: 'Chairman',
       email: 'chairman@ssbamcollege.edu',
       phone: '+91 1234567890',
-      image: '/images/governing/chairman.jpg',
+      image: './images/leaders/chairman.png',
       description: 'Leading the college with vision and dedication for over 15 years.',
     },
     {
-      name: 'Mrs. Sunita Verma',
-      position: 'Vice Chairman',
+      name: 'Ajay Ingole',
+      position: 'Secretary',
       email: 'vicechairman@ssbamcollege.edu',
       phone: '+91 1234567891',
-      image: '/images/governing/vice-chairman.jpg',
+      image: './images/leaders/secretary.png',
       description: 'Expert in educational administration and policy making.',
     },
     {
-      name: 'Mr. Amit Patel',
-      position: 'Secretary',
+      name: 'Dr. Rajesh Shriwastawa',
+      position: 'Principal',
       email: 'secretary@ssbamcollege.edu',
       phone: '+91 1234567892',
-      image: '/images/governing/secretary.jpg',
+      image: './images/leaders/principal.png',
       description: 'Managing college operations and strategic planning.',
     },
     {
@@ -33,7 +33,7 @@ const GoverningBody = () => {
       position: 'Treasurer',
       email: 'treasurer@ssbamcollege.edu',
       phone: '+91 1234567893',
-      image: '/images/governing/treasurer.jpg',
+      image: 'http://ssbam.co.in/administration/raginee.jpg',
       description: 'Overseeing financial management and resource allocation.',
     },
     {
@@ -41,7 +41,7 @@ const GoverningBody = () => {
       position: 'Academic Advisor',
       email: 'academic@ssbamcollege.edu',
       phone: '+91 1234567894',
-      image: '/images/governing/academic.jpg',
+      image: 'http://ssbam.co.in/administration/naresh_patel.jpeg',
       description: 'Guiding academic policies and curriculum development.',
     },
     {
@@ -49,7 +49,7 @@ const GoverningBody = () => {
       position: 'Member',
       email: 'member@ssbamcollege.edu',
       phone: '+91 1234567895',
-      image: '/images/governing/member.jpg',
+      image: 'http://ssbam.co.in/administration/surya_jyoti.jpeg',
       description: 'Contributing to college development and student welfare.',
     },
   ];
@@ -86,7 +86,7 @@ const GoverningBody = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 mb-4 hover:text-blue-500 transition-colors"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
@@ -105,7 +105,7 @@ const GoverningBody = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Governing Body</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-4">Our Governing Body</h2>
           <p className="text-xl text-gray-600">
             Dedicated leaders guiding the college towards excellence
           </p>
@@ -129,7 +129,7 @@ const GoverningBody = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="h-48 bg-gray-200">
+                <div className="h-90 bg-gray-200">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -176,7 +176,7 @@ const GoverningBody = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Committees</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8">Committees</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {committees.map((committee, index) => (
               <motion.div

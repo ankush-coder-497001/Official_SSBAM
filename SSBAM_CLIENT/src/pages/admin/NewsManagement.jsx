@@ -1,86 +1,116 @@
-import React, { useState } from 'react';
-import { FaPlus, FaTrash, FaEdit } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaPlus, FaTrash, FaEdit, FaNewspaper } from "react-icons/fa";
 
 const NewsManagement = () => {
   const [news, setNews] = useState([]);
   const [formData, setFormData] = useState({
-    title: '',
-    content: '',
+    title: "",
+    content: "",
     image: null,
-    date: new Date().toISOString().split('T')[0]
+    date: new Date().toISOString().split("T")[0],
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setNews([...news, { ...formData, id: Date.now() }]);
     setFormData({
-      title: '',
-      content: '',
+      title: "",
+      content: "",
       image: null,
-      date: new Date().toISOString().split('T')[0]
+      date: new Date().toISOString().split("T")[0],
     });
   };
 
   const handleDelete = (id) => {
-    setNews(news.filter(item => item.id !== id));
+    setNews(news.filter((item) => item.id !== id));
   };
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-800">News Management</h2>
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center">
-          <FaPlus className="mr-2" /> Add News
-        </button>
+        <h2 className="lg:text-2xl text-xl font-bold text-indigo-700 flex items-center gap-2">
+          <FaNewspaper />
+          News Management
+        </h2>
       </div>
 
       {/* Add News Form */}
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-8 rounded-2xl shadow-xl space-y-6"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Title */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Title</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">
+               Title
+            </label>
             <input
               type="text"
               value={formData.title}
-              onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              onChange={(e) =>
+                setFormData({ ...formData, title: e.target.value })
+              }
+              className="w-full px-4 py-2 border border-blue-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter news title"
               required
             />
           </div>
+
+          {/* Date */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Date</label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">
+               Date
+            </label>
             <input
               type="date"
               value={formData.date}
-              onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              onChange={(e) =>
+                setFormData({ ...formData, date: e.target.value })
+              }
+              className="w-full px-4 py-2 border border-blue-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
           </div>
         </div>
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700">Content</label>
+
+        {/* Content */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-1">
+             Content
+          </label>
           <textarea
             value={formData.content}
-            onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-            rows="4"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            onChange={(e) =>
+              setFormData({ ...formData, content: e.target.value })
+            }
+            rows="5"
+            className="w-full px-4 py-2 border border-blue-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Write the news content here..."
             required
           />
         </div>
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700">Image</label>
+
+        {/* Image Upload */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-1">
+             Upload Image
+          </label>
           <input
             type="file"
-            onChange={(e) => setFormData({ ...formData, image: e.target.files[0] })}
-            className="mt-1 block w-full"
+            onChange={(e) =>
+              setFormData({ ...formData, image: e.target.files[0] })
+            }
+            className="w-full px-2 py-1 text-sm text-gray-600 border border-blue-400 rounded-lg cursor-pointer file:mr-4 file:py-1 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
             accept="image/*"
           />
         </div>
-        <div className="mt-6">
+
+        {/* Submit Button */}
+        <div>
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+            className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg shadow hover:bg-indigo-700 transition cursor-pointer"
           >
             Publish News
           </button>
@@ -90,13 +120,15 @@ const NewsManagement = () => {
       {/* News List */}
       <div className="bg-white rounded-lg shadow-md">
         <div className="p-6">
-          <h3 className="text-lg font-medium text-gray-900">Recent News</h3>
+          <h3 className="text-lg font-medium text-indigo-700">Recent News</h3>
           <div className="mt-4 space-y-4">
             {news.map((item) => (
               <div key={item.id} className="border-b pb-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h4 className="text-lg font-medium text-gray-900">{item.title}</h4>
+                    <h4 className="text-lg font-medium text-gray-900">
+                      {item.title}
+                    </h4>
                     <p className="text-sm text-gray-500">{item.date}</p>
                     <p className="mt-2 text-gray-600">{item.content}</p>
                   </div>
@@ -104,7 +136,7 @@ const NewsManagement = () => {
                     <button className="text-indigo-600 hover:text-indigo-800">
                       <FaEdit />
                     </button>
-                    <button 
+                    <button
                       onClick={() => handleDelete(item.id)}
                       className="text-red-600 hover:text-red-800"
                     >
@@ -121,4 +153,4 @@ const NewsManagement = () => {
   );
 };
 
-export default NewsManagement; 
+export default NewsManagement;

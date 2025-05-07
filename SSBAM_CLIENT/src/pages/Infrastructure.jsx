@@ -8,37 +8,37 @@ const Infrastructure = () => {
       icon: <FaBuilding className="w-8 h-8 text-indigo-600" />,
       title: 'Modern Classrooms',
       description: 'Well-equipped classrooms with smart boards and audio-visual facilities',
-      image: '/images/infrastructure/classrooms.jpg',
+      image: 'http://ssbam.co.in/images/ac4.jpg',
     },
     {
       icon: <FaLaptop className="w-8 h-8 text-indigo-600" />,
       title: 'Computer Labs',
       description: 'State-of-the-art computer laboratories with high-speed internet',
-      image: '/images/infrastructure/computer-lab.jpg',
+      image: 'https://images.unsplash.com/photo-1719159381981-1327b22aff9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBsYWJ8ZW58MHx8MHx8fDA%3D',
     },
     {
       icon: <FaBook className="w-8 h-8 text-indigo-600" />,
       title: 'Library',
       description: 'Extensive collection of books, journals, and digital resources',
-      image: '/images/infrastructure/library.jpg',
+      image: 'http://ssbam.co.in/images/lib1.jpeg',
     },
     {
       icon: <FaFlask className="w-8 h-8 text-indigo-600" />,
       title: 'Science Labs',
       description: 'Well-equipped laboratories for practical learning and research',
-      image: '/images/infrastructure/science-lab.jpg',
+      image: 'http://ssbam.co.in/images/physics(1).jpg',
     },
     {
       icon: <FaWifi className="w-8 h-8 text-indigo-600" />,
       title: 'Wi-Fi Campus',
       description: 'High-speed internet connectivity across the campus',
-      image: '/images/infrastructure/wifi.jpg',
+      image: 'http://ssbam.co.in/images/sr1.jpg',
     },
     {
       icon: <FaParking className="w-8 h-8 text-indigo-600" />,
       title: 'Parking Facility',
       description: 'Ample parking space for students and staff',
-      image: '/images/infrastructure/parking.jpg',
+      image: 'https://images.unsplash.com/photo-1677468679336-3f4763b91eb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW5kaWFuJTIwY29sbGVnZSUyMHBhcmtpbmd8ZW58MHx8MHx8fDA%3D',
     },
   ];
 
@@ -74,7 +74,7 @@ const Infrastructure = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 mt-2 mb-4 hover:text-blue-500 transition-colors"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
@@ -94,7 +94,7 @@ const Infrastructure = () => {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Facilities</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8">Our Facilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {facilities.map((facility, index) => (
               <motion.div
@@ -131,7 +131,7 @@ const Infrastructure = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Campus Features</h2>
+          <h2 className="text-3xl font-bold text-indigo-600 mb-8">Campus Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {campusFeatures.map((feature, index) => (
               <motion.div

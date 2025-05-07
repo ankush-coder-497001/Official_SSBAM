@@ -1,7 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaAddressCard, FaArrowLeft, FaBookOpen } from "react-icons/fa";
+import { FaPenRuler } from "react-icons/fa6";
 
 const RulesRegulation = () => {
   return (
@@ -17,12 +18,14 @@ const RulesRegulation = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Rules & Regulations</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Rules & Regulations
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -37,23 +40,29 @@ const RulesRegulation = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-800" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                Our Rules & Regulations are designed to ensure a safe, respectful, and conducive environment for learning. They outline the expectations and responsibilities of students, faculty, and staff.
+                Our Rules & Regulations are designed to ensure a safe,
+                respectful, and conducive environment for learning. They outline
+                the expectations and responsibilities of students, faculty, and
+                staff.
               </p>
             </motion.div>
 
             {/* Rules Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Rules</h2>
+                         initial={{ opacity: 0, x: -20 }}
+                         whileInView={{ opacity: 1, x: 0 }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 0.5 }}
+                         className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
+                       >
+                         <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                         <FaPenRuler className="text-indigo-800" />Rules</h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Attendance: Minimum 75% required</li>
                 <li>Academic Integrity: No plagiarism or cheating</li>
@@ -70,9 +79,20 @@ const RulesRegulation = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+             <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                             <FaAddressCard className="text-indigo-800" />
+                             Contact Us
+                           </h2>
               <p className="text-gray-600">
-                For any queries regarding the rules and regulations, please contact our administration office at <a href="mailto:admin@college.edu" className="text-indigo-600 hover:underline">admin@college.edu</a>.
+                For any queries regarding the rules and regulations, please
+                contact our administration office at{" "}
+                <a
+                  href="mailto:admin@college.edu"
+                  className="text-indigo-600 hover:underline"
+                >
+                  admin@college.edu
+                </a>
+                .
               </p>
             </motion.div>
           </div>
@@ -82,4 +102,4 @@ const RulesRegulation = () => {
   );
 };
 
-export default RulesRegulation; 
+export default RulesRegulation;

@@ -1,31 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  FaAddressCard,
+  FaArrowLeft,
+  FaBookOpen,
+  FaChalkboardTeacher,
+  FaClipboardList,
+} from "react-icons/fa";
+import { GiArchiveResearch } from "react-icons/gi";
 
 const ArtsSocialScience = () => {
   // Sample data for faculty
   const faculty = [
     {
-      name: 'Dr. Rajendra Kumar',
-      designation: 'Head of Department',
-      qualification: 'Ph.D. in Political Science',
-      specialization: 'International Relations & Public Policy',
-      image: '/placeholder-faculty1.jpg',
+      name: "Dr. R.N. Sharma",
+      designation: "Head of Department",
+      qualification: "Ph.D. in Political Science",
+      specialization: "International Relations & Public Policy",
+      image: "http://ssbam.co.in/teacher_info/image/rn_sharma.jpg",
     },
     {
-      name: 'Prof. Smita Desai',
-      designation: 'Associate Professor',
-      qualification: 'Ph.D. in Sociology',
-      specialization: 'Social Development & Gender Studies',
-      image: '/placeholder-faculty2.jpg',
+      name: "Prof. Smita Desai",
+      designation: "Associate Professor",
+      qualification: "Ph.D. in Sociology",
+      specialization: "Social Development & Gender Studies",
+      image: "http://ssbam.co.in/teacher_info/image/rounak_nisha.jpg",
     },
     {
-      name: 'Dr. Arun Sharma',
-      designation: 'Assistant Professor',
-      qualification: 'Ph.D. in History',
-      specialization: 'Modern Indian History & Cultural Studies',
-      image: '/placeholder-faculty3.jpg',
+      name: "Dr. Arun Sharma",
+      designation: "Assistant Professor",
+      qualification: "Ph.D. in History",
+      specialization: "Modern Indian History & Cultural Studies",
+      image: "http://ssbam.co.in/teacher_info/image/krishna_ram_chouhan.jpg",
     },
   ];
 
@@ -33,21 +40,23 @@ const ArtsSocialScience = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
       <section className="relative h-64 bg-indigo-600">
-        <div className="absolute inset-0 bg-black opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Arts & Social Science</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-md">
+              Arts & Social Science
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -62,23 +71,31 @@ const ArtsSocialScience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-lg hover:shadow-2xl p-8 transition-shadow"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-600" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                The Department of Arts and Social Sciences offers comprehensive programs in various disciplines including History, Political Science, Sociology, and Economics. Our focus is on developing critical thinking and analytical skills in students.
+                The Department of Arts and Social Sciences offers comprehensive
+                programs in various disciplines including History, Political
+                Science, Sociology, and Economics. Our focus is on developing
+                critical thinking and analytical skills in students.
               </p>
             </motion.div>
 
             {/* Programs Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Programs</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaClipboardList className="text-indigo-600" />
+                Programs
+              </h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Bachelor of Arts (History)</li>
                 <li>Bachelor of Arts (Political Science)</li>
@@ -95,9 +112,15 @@ const ArtsSocialScience = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Research</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <GiArchiveResearch className="text-indigo-600" />
+                Research Areas
+              </h2>
               <p className="text-gray-600">
-                Our department conducts research in various areas of social sciences, including social development, public policy, cultural studies, and economic development. Students are encouraged to participate in research projects and seminars.
+                Our department conducts research in various areas of social
+                sciences, including social development, public policy, cultural
+                studies, and economic development. Students are encouraged to
+                participate in research projects and seminars.
               </p>
             </motion.div>
 
@@ -109,7 +132,10 @@ const ArtsSocialScience = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Faculty</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaChalkboardTeacher className="text-indigo-600 " />
+                Our Faculty
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {faculty.map((member, index) => (
                   <motion.div
@@ -120,7 +146,7 @@ const ArtsSocialScience = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   >
-                    <div className="h-48 bg-gray-200">
+                    <div className="h-80 bg-gray-200">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -128,10 +154,18 @@ const ArtsSocialScience = () => {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                      <p className="text-indigo-600 font-semibold mb-2">{member.designation}</p>
-                      <p className="text-gray-600 mb-2">{member.qualification}</p>
-                      <p className="text-gray-600">Specialization: {member.specialization}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {member.name}
+                      </h3>
+                      <p className="text-indigo-600 font-semibold mb-2">
+                        {member.designation}
+                      </p>
+                      <p className="text-gray-600 mb-2">
+                        {member.qualification}
+                      </p>
+                      <p className="text-gray-600">
+                        Specialization: {member.specialization}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -146,9 +180,20 @@ const ArtsSocialScience = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaAddressCard className="text-indigo-600" />
+                Contact Us
+              </h2>
               <p className="text-gray-600">
-                For any queries regarding our Arts and Social Science programs, please contact our department office at <a href="mailto:arts.social@college.edu" className="text-indigo-600 hover:underline">arts.social@college.edu</a>.
+                For any queries regarding our Arts and Social Science programs,
+                please contact our department office at{" "}
+                <a
+                  href="mailto:arts.social@college.edu"
+                  className="text-indigo-600 hover:underline"
+                >
+                  arts.social@college.edu
+                </a>
+                .
               </p>
             </motion.div>
           </div>
@@ -158,4 +203,4 @@ const ArtsSocialScience = () => {
   );
 };
 
-export default ArtsSocialScience; 
+export default ArtsSocialScience;

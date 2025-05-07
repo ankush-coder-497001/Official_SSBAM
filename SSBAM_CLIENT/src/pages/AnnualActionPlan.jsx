@@ -1,7 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaAddressCard, FaArrowLeft, FaBookOpen } from "react-icons/fa";
+import { SiOpencontainersinitiative } from "react-icons/si";
 
 const AnnualActionPlan = () => {
   return (
@@ -22,7 +23,9 @@ const AnnualActionPlan = () => {
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Annual Action Plan</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Annual Action Plan
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -37,23 +40,30 @@ const AnnualActionPlan = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaBookOpen className="text-indigo-800" /> Overview
+              </h2>
               <p className="text-gray-600 mb-4">
-                Our Annual Action Plan outlines the strategic initiatives and goals for the upcoming academic year. It is designed to enhance the quality of education and student experience.
+                Our Annual Action Plan outlines the strategic initiatives and
+                goals for the upcoming academic year. It is designed to enhance
+                the quality of education and student experience.
               </p>
             </motion.div>
 
             {/* Initiatives Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Initiatives</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <SiOpencontainersinitiative className="text-indigo-800" />
+                Initiatives
+              </h2>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Enhance Academic Programs</li>
                 <li>Improve Campus Facilities</li>
@@ -70,9 +80,20 @@ const AnnualActionPlan = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2 bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                <FaAddressCard className="text-indigo-800" />
+                Contact Us
+              </h2>
               <p className="text-gray-600">
-                For any queries regarding the Annual Action Plan, please contact our planning office at <a href="mailto:planning@college.edu" className="text-indigo-600 hover:underline">planning@college.edu</a>.
+                For any queries regarding the Annual Action Plan, please contact
+                our planning office at{" "}
+                <a
+                  href="mailto:planning@college.edu"
+                  className="text-indigo-600 hover:underline"
+                >
+                  planning@college.edu
+                </a>
+                .
               </p>
             </motion.div>
           </div>
@@ -82,4 +103,4 @@ const AnnualActionPlan = () => {
   );
 };
 
-export default AnnualActionPlan; 
+export default AnnualActionPlan;

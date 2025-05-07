@@ -1,15 +1,21 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  FaArrowLeft,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -22,28 +28,30 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <section className="relative h-64 bg-indigo-600">
-        <div className="absolute inset-0 bg-black opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+      <section className="relative h-64 bg-indigo-700">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             <Link
               to="/"
-              className="inline-flex items-center text-white mb-4 hover:text-indigo-200 transition-colors"
+              className="inline-flex items-center text-blue-400 text-sm mb-3 mt-10 hover:text-blue-500 transition"
             >
               <FaArrowLeft className="mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-md">
+              Contact Us
+            </h1>
           </motion.div>
         </div>
       </section>
@@ -60,10 +68,12 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-indigo-800 mb-6">
+                Get in Touch
+              </h2>
               <p className="text-gray-600 text-lg mb-8">
-                Have questions? We'd love to hear from you. Send us a message and we'll respond as
-                soon as possible.
+                Have questions? We'd love to hear from you. Send us a message
+                and we'll respond as soon as possible.
               </p>
             </div>
 
@@ -71,12 +81,17 @@ const Contact = () => {
               <div className="flex items-start">
                 <FaMapMarkerAlt className="w-6 h-6 text-indigo-600 mt-1 mr-4" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Address
+                  </h3>
                   <p className="text-gray-600">
-                    SS BAM College<br />
-                    123 College Street<br />
-                    City, State - 123456<br />
-                    Country
+                    SSBAM College
+                    <br />
+                    Digma, Banaras Road
+                    <br />
+                    Ambikapur, Surguja, CG
+                    <br />
+                    India
                   </p>
                 </div>
               </div>
@@ -84,7 +99,9 @@ const Contact = () => {
               <div className="flex items-start">
                 <FaPhone className="w-6 h-6 text-indigo-600 mt-1 mr-4" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Phone
+                  </h3>
                   <p className="text-gray-600">+91 1234567890</p>
                   <p className="text-gray-600">+91 9876543210</p>
                 </div>
@@ -93,7 +110,9 @@ const Contact = () => {
               <div className="flex items-start">
                 <FaEnvelope className="w-6 h-6 text-indigo-600 mt-1 mr-4" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Email
+                  </h3>
                   <p className="text-gray-600">info@ssbamcollege.edu</p>
                   <p className="text-gray-600">admissions@ssbamcollege.edu</p>
                 </div>
@@ -102,8 +121,12 @@ const Contact = () => {
               <div className="flex items-start">
                 <FaClock className="w-6 h-6 text-indigo-600 mt-1 mr-4" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Office Hours</h3>
-                  <p className="text-gray-600">Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Office Hours
+                  </h3>
+                  <p className="text-gray-600">
+                    Monday - Saturday: 9:00 AM - 5:00 PM
+                  </p>
                   <p className="text-gray-600">Sunday: Closed</p>
                 </div>
               </div>
@@ -117,10 +140,16 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-lg shadow-lg p-8"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Name
                   </label>
                   <input
@@ -130,11 +159,14 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -144,13 +176,16 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
                 </div>
               </div>
 
               <div className="mb-6">
-                <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Phone
                 </label>
                 <input
@@ -159,12 +194,15 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -174,12 +212,15 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -189,7 +230,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 ></textarea>
               </div>
 
@@ -197,7 +238,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-indigo-600 text-white py-3 px-6 rounded-md hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full bg-indigo-600 text-white py-3 px-6 rounded-md hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer"
               >
                 Send Message
               </motion.button>
@@ -215,7 +256,7 @@ const Contact = () => {
         >
           <div className="bg-white rounded-lg shadow-lg p-4">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d0.000000!3d0.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDAnMDAuMCJOIDDCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.796952239328!2d83.16599967509613!3d23.15919537907833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3989a16e28c8a885%3A0xdef4e5df9705ccb6!2sShri%20Sai%20Baba%20Aadarsh%20Mahavidyalaya!5e1!3m2!1sen!2sin!4v1745838219574!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -231,4 +272,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
